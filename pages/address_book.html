@@ -21,12 +21,15 @@
     </div>
 
     <div class="form-content">
-      <form class="form" action="#" onsubmit="save()" onreset="resetForm()">
-        <div class="form-head">PERSON ADDRESSBOOK FORM</div>
-        <span class="glyphicon glyphicon-remove-circle"></span>
+      <form class="form" id="new-address">
+        <div class="form-head">
+        <div class="form-text-head">PERSON ADDRESSBOOK FORM</div>
+        <div class="form-cancel-icon"><span class="glyphicon glyphicon-remove-circle"></span>
+      </div>
+    </div>
         <div>
           <p>
-            <input type="text" placeholder=" " id="fname" name="fullname" required>
+            <input type="text" placeholder=" " id="fullname" name="fullname" required>
             <label>Enter Full Name:-</label>
           </p>
           <error-output class="fullname-error" for="text"></error-output>
@@ -56,10 +59,9 @@
               <option value="TamilNadu">TamilNadu</option>
             </select>
             <p>
-              <input placeholder=" " id="pin" name="pincode" required>
+              <input placeholder=" " id="zip" name="zip" required>
               <label>Enter the Zip Code:-</label>
             </p>
-
           </div>
           <p>
             <input placeholder=" " id="phone" name="phone" required>
@@ -68,7 +70,7 @@
           <error-output class="phone-error" for="text"></error-output>
           <div class="buttonParent">
             <div class="submit-reset">
-              <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+              <button type="submit" class="button submitButton" id="submitButton" data-target="home.html">Submit</button>
               <button type="reset" class="button submitButton">Reset</button>
             </div>
           </div>
@@ -76,6 +78,8 @@
       </form>
     </div>
   </header>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script src="/js/scripts.js"></script>
 </body>
-
 </html>
